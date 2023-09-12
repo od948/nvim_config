@@ -6,7 +6,7 @@ return {
 	opts = {
 		sort_by = "case_sensitive",
 		filters = {
-			dotfiles = true,
+			dotfiles = false,
 		},
 	},
 	keys = {

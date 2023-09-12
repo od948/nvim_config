@@ -10,5 +10,10 @@ return {
 		defaults = {
 			layout_strategy = 'vertical',
 		},
+		pickers = {
+			find_files = {
+				find_command = { "rg", "--files", "--hidden", "-g", "!.git" },
+			},
+		},
 	},
 }
