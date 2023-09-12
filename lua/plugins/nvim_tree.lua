@@ -8,6 +8,9 @@ return {
 		filters = {
 			dotfiles = false,
 		},
+		view = {
+			width = 40
+		},
 	},
 	keys = {
 		{ "<leader>FT", "<cmd>NvimTreeFindFile<cr>", desc = "NvimTreeFindFile", },
