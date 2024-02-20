@@ -1,4 +1,5 @@
 return {
-	"ellisonleao/gruvbox.nvim",
-	lazy = false,
+    "ellisonleao/gruvbox.nvim",
+    config = true,
+    lazy = false,
 }

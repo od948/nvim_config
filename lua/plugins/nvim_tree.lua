@@ -1,8 +1,8 @@
 return {
     "nvim-tree/nvim-tree.lua",
+    main = "nvim-tree",
     version = "",
     lazy = false,
-    config = true,
     opts = {
         sort_by = "case_sensitive",
         filters = {

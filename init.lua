@@ -10,7 +10,6 @@ vim.g.mapleader = " " -- set leader to space
 vim.opt.tabstop = 8
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
 vim.opt.number = true
 vim.wo.relativenumber = true 
 vim.opt.wrap = true
@@ -34,6 +33,7 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 
+vim.opt.termguicolors = true
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins");
@@ -42,8 +42,23 @@ require("lazy").setup("plugins");
 -- ==  Plugin Config  == --
 -- ===================== --
 
-vim.opt.termguicolors = true
 vim.cmd.colorscheme('gruvbox')
+
+-- toggleTerm
+local Terminal  = require('toggleterm.terminal').Terminal
+local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
+local newTerm = Terminal:new({ hidden = true, direction = "float" })
+
+function _lazygit_toggle()
+  lazygit:toggle()
+end
+
+function _new_term_toggle() 
+    newTerm:toggle()
+end
+
+vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>t", "<cmd>lua _new_term_toggle()<CR>", {noremap = true, silent = true})
 
 -- mason lsp stuff
 require("mason").setup()
