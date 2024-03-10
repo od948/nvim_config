@@ -15,6 +15,7 @@ vim.wo.relativenumber = true
 vim.opt.wrap = true
 vim.opt.breakindent = true
 vim.opt.signcolumn = "yes"
+vim.opt.colorcolumn = "100"
 
 -- ===================== --
 -- ==     Plugins     == --
