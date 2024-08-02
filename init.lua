@@ -43,7 +43,7 @@ require("lazy").setup("plugins");
 -- ==  Plugin Config  == --
 -- ===================== --
 
-vim.cmd.colorscheme('gruvbox')
+vim.cmd.colorscheme('catppuccin')
 
 -- toggleTerm
 local Terminal  = require('toggleterm.terminal').Terminal
