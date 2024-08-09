@@ -8,10 +8,11 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.g.mapleader = " " -- set leader to space
 vim.opt.tabstop = 8
+vim.opt.expandtab = false;
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.number = true
-vim.wo.relativenumber = true 
+vim.wo.relativenumber = true
 vim.opt.wrap = true
 vim.opt.breakindent = true
 vim.opt.signcolumn = "yes"
